@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class IndexController {
     @GetMapping({ "", "/" })
     public String index() {
-        // 머스테 이용. 기본 폴더 : src/main/resources/
+        // 머스테치 이용. 기본 폴더 : src/main/resources/
         // 뷰 리졸버 설정 : templates (prefix), .mustache (suffix)
         return "index";
     }
