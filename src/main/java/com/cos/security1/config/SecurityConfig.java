@@ -34,9 +34,11 @@ public class SecurityConfig {
                         .loginPage("/loginForm")
                         .loginProcessingUrl("/login")
                         .defaultSuccessUrl("/")
-                        .permitAll());
+                        .permitAll())
+                .oauth2Login()
+                .loginPage("/loginForm"); // 구글로그인이 완료된 뒤의 후처리가 필요함!
+
 
         return http.build();
     }
-
 }
