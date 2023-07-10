@@ -11,9 +11,13 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/security?serverTimezone=Asia/Seoul
-    username: cos
-    password: cos1234
+    username: root
+    password: 12341234
 
+  mvc:
+    view:
+      prefix: /templates/
+      suffix: .mustache
 
   jpa:
     hibernate:
@@ -21,3 +25,15 @@ spring:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     show-sql: true
+
+
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 572882134809-rlqm6mt3p1ovu5m62d5f0d7ls19p42b2.apps.googleusercontent.com
+            client-secret: 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
+            scope:
+              - email
+              - profile
